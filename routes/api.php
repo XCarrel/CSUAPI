@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShiftSheetController;
 use App\Http\Controllers\TodoSheetController;
 use App\Http\Controllers\DrugSheetController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,8 @@ use App\Http\Controllers\DrugSheetController;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::post('gettoken',[UserController::class,'getToken']);
 
 Route::resources([
     'shiftsheets' => ShiftSheetController::class,
