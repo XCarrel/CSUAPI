@@ -83,4 +83,12 @@ class DrugSheetController extends Controller
     {
         //
     }
+
+    public function pharmacheck(Request $request)
+    {
+        $batch_id = $request->input('batch_id');
+        $drugsheet_id = $request->input('drugsheet_id');
+        dd(compact('batch_id','drugsheet_id'));
+        return response('Ok');
+    }
 }
