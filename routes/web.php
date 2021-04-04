@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\User;
+use App\Models\Shiftsheet;
+use App\Models\Drugsheet;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    dd(Drugsheet::filledBy(User::find(102)));
     return view('welcome');
 });
