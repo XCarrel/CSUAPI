@@ -8,6 +8,7 @@ use App\Models\Drugsheet;
 use App\Models\Shiftsheet;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Str;
 
@@ -40,12 +41,9 @@ class UserController extends Controller
 
     public function myReports(Request $request)
     {
-        $token = substr($request->header('Authorization'), strlen('Bearer '));
-        $user = User::where('token', $token)->first();
-        if (!$user) return response('Invalid token', 401);
         return [
-            "shift" => ShiftsheetResource::collection(Shiftsheet::employing($user)),
-            "drug" => DrugsheetResource::collection(Drugsheet::filledBy($user))
+            "shift" => ShiftsheetResource::collection(Shiftsheet::employing(Auth::user())),
+            "drug" => DrugsheetResource::collection(Drugsheet::filledBy(Auth::user()))
         ];
     }
 }

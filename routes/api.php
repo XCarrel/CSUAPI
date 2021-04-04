@@ -19,7 +19,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::post('gettoken',[UserController::class,'getToken']);
-Route::get('getreports',[UserController::class,'myReports']);
+Route::middleware('auth:api')->get('getreports',[UserController::class,'myReports']);
 
 Route::resources([
     'shiftsheets' => ShiftSheetController::class,
