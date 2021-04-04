@@ -19,14 +19,15 @@ use App\Http\Controllers\UserController;
 */
 
 Route::post('gettoken',[UserController::class,'getToken']);
-Route::middleware('auth:api')->get('getreports',[UserController::class,'myReports']);
 
-Route::resources([
-    'shiftsheets' => ShiftSheetController::class,
-    'todosheets' => TodoSheetController::class,
-    'drugsheets' => DrugSheetController::class,
-]);
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function () {
+    Route::get('getreports',[UserController::class,'myReports']);
+    Route::resources([
+        'shiftsheets' => ShiftSheetController::class,
+        'todosheets' => TodoSheetController::class,
+        'drugsheets' => DrugSheetController::class,
+    ]);
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 });

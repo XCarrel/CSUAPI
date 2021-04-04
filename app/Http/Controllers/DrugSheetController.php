@@ -15,7 +15,7 @@ class DrugSheetController extends Controller
      */
     public function index()
     {
-        return DrugsheetResource::collection(Drugsheet::with(['base','status'])->get());
+        return Drugsheet::with(['base','status'])->get();
     }
 
     /**
@@ -47,7 +47,7 @@ class DrugSheetController extends Controller
      */
     public function show($id)
     {
-        //
+        return Drugsheet::with(['base','status'])->where('id',$id)->get();
     }
 
     /**

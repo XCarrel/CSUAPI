@@ -15,7 +15,7 @@ class ShiftSheetController extends Controller
      */
     public function index()
     {
-        return ShiftsheetResource::collection(Shiftsheet::all());
+        return Shiftsheet::with(['base','status'])->get();
     }
 
     /**
@@ -47,7 +47,7 @@ class ShiftSheetController extends Controller
      */
     public function show($id)
     {
-        //
+        return Shiftsheet::with(['base','status'])->where('id',$id)->get();
     }
 
     /**

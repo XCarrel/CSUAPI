@@ -30,6 +30,9 @@ class Shiftsheet extends Model
     }
 
     //=========================== Basic Eloquent relationships
+    public function status() {
+        return $this->belongsTo(Status::class);
+    }
 
     public function base()
     {
