@@ -16,7 +16,8 @@ class ShiftsheetResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'date' => $this->date
+            'date' => $this->date,
+            'base' => $this->base->name
         ];
     }
 }

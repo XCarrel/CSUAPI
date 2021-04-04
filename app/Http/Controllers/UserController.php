@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\ShiftsheetResource;
+use App\Models\Shiftsheet;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Log;
@@ -31,5 +33,17 @@ class UserController extends Controller
         } else {
             return response('Invalid credentials',401); // bad usernamre
         }
+    }
+
+    public function myReports(Request $request) {
+        $token = substr($request->header('Authorization'),strlen('Bearer '));
+        $user = User::where('token',$token)->first();
+        if (!$user) return response('Invalid token',401);
+        $shifts = ShiftsheetResource::collection(
+            Shiftsheet::where('dayboss_id',$user->id)
+            ->orWhere('nightboss_id',$user->id)
+            ->orWhere('dayteammate_id',$user->id)
+            ->orWhere('nightteammate_id',$user->id)->get());
+        return $shifts;
     }
 }

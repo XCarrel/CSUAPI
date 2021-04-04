@@ -11,4 +11,8 @@ class Shiftsheet extends Model
 
     public $timestamps = false;
 
+    public function base()
+    {
+        return $this->belongsTo(Base::class);
+    }
 }

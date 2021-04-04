@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6c4fb1f9-5ca3-4eb9-ae49-7b09ff50fe46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/AddCorsHeaders.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/PreflightResponse.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Resources/ShiftsheetResource.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Resources/ShiftsheetResource.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Shiftsheet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Shiftsheet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +177,7 @@
       <workItem from="1616597407585" duration="3602000" />
       <workItem from="1616680612224" duration="14000" />
       <workItem from="1617022722206" duration="10465000" />
-      <workItem from="1617200778751" duration="10755000" />
+      <workItem from="1617200778751" duration="13514000" />
     </task>
     <servers />
   </component>
