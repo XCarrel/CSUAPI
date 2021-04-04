@@ -6,6 +6,7 @@ use App\Http\Controllers\ShiftSheetController;
 use App\Http\Controllers\TodoSheetController;
 use App\Http\Controllers\DrugSheetController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,6 +23,7 @@ Route::post('gettoken',[UserController::class,'getToken']);
 
 Route::middleware('auth:api')->group(function () {
     Route::get('getreports',[UserController::class,'myReports']);
+    Route::get('getactivedrugsheet/{baseid}',[BaseController::class,'getActiveDrugsheet']);
     Route::resources([
         'shiftsheets' => ShiftSheetController::class,
         'todosheets' => TodoSheetController::class,

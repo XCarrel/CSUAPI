@@ -59,5 +59,20 @@ class Drugsheet extends Model
         return $this->belongsToMany(User::class,'novachecks')->distinct();
     }
 
+    /**
+     * The batches used in this sheet
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function batches() {
+        return $this->belongsToMany(Batch::class,'drugsheet_use_batch')->orderBy('drug_id');
+    }
+
+    /**
+     * The novas used in this sheet
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function novas() {
+        return $this->belongsToMany(Nova::class,'drugsheet_use_nova');
+    }
 
 }
