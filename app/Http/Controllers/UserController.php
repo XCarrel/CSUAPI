@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\DrugsheetResource;
 use App\Http\Resources\ShiftsheetResource;
+use App\Models\Drugsheet;
 use App\Models\Shiftsheet;
 use Illuminate\Http\Request;
 use App\Models\User;
@@ -14,12 +16,13 @@ class UserController extends Controller
     /**
      * get an API token, providing a valid password hash
      */
-    public function getToken(Request $request) {
+    public function getToken(Request $request)
+    {
         if (env('APP_DEBUG')) Log::info(__METHOD__);
         // don't know why, but React sends arrays in inputs
         extract($request->input('initials')); // $initials
         extract($request->input('password')); // $password
-        $user = User::where('initials',$initials)->first();
+        $user = User::where('initials', $initials)->first();
         if ($user) {
             if (password_verify($password, $user->password)) {
                 if (!$user->token) { // generate a new token
@@ -28,18 +31,21 @@ class UserController extends Controller
                 }
                 return json_encode(['token' => $user->token]); // Login success
             } else {
-                return response('Invalid credentials',401); // bad password
+                return response('Invalid credentials', 401); // bad password
             }
         } else {
-            return response('Invalid credentials',401); // bad usernamre
+            return response('Invalid credentials', 401); // bad usernamre
         }
     }
 
-    public function myReports(Request $request) {
-        $token = substr($request->header('Authorization'),strlen('Bearer '));
-        $user = User::where('token',$token)->first();
-        if (!$user) return response('Invalid token',401);
-        $shifts = ShiftsheetResource::collection(Shiftsheet::employing($user));
-        return $shifts;
+    public function myReports(Request $request)
+    {
+        $token = substr($request->header('Authorization'), strlen('Bearer '));
+        $user = User::where('token', $token)->first();
+        if (!$user) return response('Invalid token', 401);
+        return [
+            "shift" => ShiftsheetResource::collection(Shiftsheet::employing($user)),
+            "drug" => DrugsheetResource::collection(Drugsheet::filledBy($user))
+        ];
     }
 }
