@@ -39,11 +39,7 @@ class UserController extends Controller
         $token = substr($request->header('Authorization'),strlen('Bearer '));
         $user = User::where('token',$token)->first();
         if (!$user) return response('Invalid token',401);
-        $shifts = ShiftsheetResource::collection(
-            Shiftsheet::where('dayboss_id',$user->id)
-            ->orWhere('nightboss_id',$user->id)
-            ->orWhere('dayteammate_id',$user->id)
-            ->orWhere('nightteammate_id',$user->id)->get());
+        $shifts = ShiftsheetResource::collection(Shiftsheet::employing($user));
         return $shifts;
     }
 }
