@@ -116,6 +116,7 @@ class Drugsheet extends Model
                     if (!$pharmacheck->start || !$pharmacheck->end) { // start or end is missing. Just add display properties, the rest is fine
                         $pharmacheck->drug = $batch->drug->name;
                         $pharmacheck->batch_number = $batch->number;
+                        unset ($pharmacheck->id,$pharmacheck->user_id); // prune useless attributes
                         $res[] = $pharmacheck;
                     }
                 } else {
@@ -125,6 +126,7 @@ class Drugsheet extends Model
                     $pharmacheck->batch_id = $batch->id;
                     $pharmacheck->batch_number = $batch->number;
                     $pharmacheck->drugsheet_id = $this->id;
+                    unset ($pharmacheck->id,$pharmacheck->user_id); // prune useless attributes
                     $res[] = $pharmacheck;
                 }
             }
@@ -159,6 +161,7 @@ class Drugsheet extends Model
                         if (!$novacheck->start || !$novacheck->end) { // start or end is missing. Just add display properties, the rest is fine
                             $novacheck->nova = $nova->number;
                             $novacheck->drug = $drug["name"];
+                            unset ($novacheck->id,$novacheck->user_id); // prune useless attributes
                             $res[] = $novacheck;
                         }
                     } else {
@@ -167,6 +170,7 @@ class Drugsheet extends Model
                         $novacheck->nova = $nova->number;
                         $novacheck->drug = $drug["name"];
                         $novacheck->drugsheet_id = $this->id;
+                        unset ($novacheck->id,$novacheck->user_id); // prune useless attributes
                         $res[] = $novacheck;
                     }
                 }
