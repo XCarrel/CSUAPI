@@ -11,4 +11,6 @@ class NovaCheck extends Model
 
     public $timestamps = false;
 
+    public $table = "novachecks";
+
 }

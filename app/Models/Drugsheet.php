@@ -76,6 +76,14 @@ class Drugsheet extends Model
     }
 
     /**
+     * The drugs used in this sheet
+     */
+    public function drugs()
+    {
+        return array_unique($this->batches()->with('drug')->get()->pluck('drug')->flatten()->toArray(), SORT_REGULAR);
+    }
+
+    /**
      * The novas used in this sheet
      * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
@@ -118,6 +126,49 @@ class Drugsheet extends Model
                     $pharmacheck->batch_number = $batch->number;
                     $pharmacheck->drugsheet_id = $this->id;
                     $res[] = $pharmacheck;
+                }
+            }
+            $dayOfSheet->addDay();
+        }
+        return($res);
+    }
+
+    /**
+     * Returns all novachecks of the sheet that are:
+     * - incomplete (missing start OR end value)
+     * - not in the future
+     * @return array
+     */
+    public function missingNovaChecks()
+    {
+        // Compute first day of the sheet
+        $year = 2000 + intdiv($this->week, 100);
+        $week = $this->week % 100;
+        $dayOfSheet = Carbon::create(date('Y-m-d', strtotime(sprintf("%4dW%02d", $year, $week))));
+
+        $res = [];
+        for ($dow = 0; $dow < 7; $dow++) {
+            if ($dayOfSheet->equalTo(Carbon::tomorrow())) break; // don't list future days
+            foreach ($this->novas as $nova) {
+                foreach ($this->drugs() as $drug) { // !!! drugs is not an eloquent relationship
+                    $novacheck = novaCheck::where('date', $dayOfSheet->toDateString('Y-m-d'))
+                        ->where('nova_id', $nova->id)
+                        ->where('drug_id', $drug["id"])
+                        ->where('drugsheet_id', $this->id)->first();
+                    if ($novacheck) {
+                        if (!$novacheck->start || !$novacheck->end) { // start or end is missing. Just add display properties, the rest is fine
+                            $novacheck->nova = $nova->number;
+                            $novacheck->drug = $drug["name"];
+                            $res[] = $novacheck;
+                        }
+                    } else {
+                        $novacheck = new novaCheck();
+                        $novacheck->date = $dayOfSheet->toDateString('Y-m-d');
+                        $novacheck->nova = $nova->number;
+                        $novacheck->drug = $drug["name"];
+                        $novacheck->drugsheet_id = $this->id;
+                        $res[] = $novacheck;
+                    }
                 }
             }
             $dayOfSheet->addDay();

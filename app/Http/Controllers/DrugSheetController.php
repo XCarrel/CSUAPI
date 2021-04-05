@@ -86,15 +86,22 @@ class DrugSheetController extends Controller
         //
     }
 
+    /**
+     * Returns all pharmachecks of the active sheet of a base that are:
+     * - incomplete (missing start OR end value)
+     * - not in the future
+     */
     public function getMissingPharmaChecksForBase($base_id) {
         // Get the active drugsheet for the given base
         $activeSheet = Drugsheet::where('base_id', $base_id)->whereHas('status', function ($q) {
             $q->where('slug', 'open');
         })->first();
-
-        return $activeSheet->missingPharmaChecks();
+        return $activeSheet ? $activeSheet->missingPharmaChecks() : null;
     }
 
+    /**
+     * Processes a POST request that provides data for a pharmacheck
+     */
     public function pharmacheck(Request $request)
     {
         $batch = Batch::find($request->input('batch_id'));
@@ -116,6 +123,48 @@ class DrugSheetController extends Controller
         $pharmacheck->start = $request->input('start'); // TODO ignore redefinition of the values
         $pharmacheck->end = $request->input('end');
         $pharmacheck->save();
+
+        return response('Ok');
+    }
+
+    /**
+     * Returns all novachecks of the active sheet of a base that are:
+     * - incomplete (missing start OR end value)
+     * - not in the future
+     */
+
+    public function getMissingNovaChecksForBase($base_id) {
+        // Get the active drugsheet for the given base
+        $activeSheet = Drugsheet::where('base_id', $base_id)->whereHas('status', function ($q) {
+            $q->where('slug', 'open');
+        })->first();
+        return $activeSheet ? $activeSheet->missingNovaChecks() : null;
+    }
+
+    /**
+     * Processes a POST request that provides data for a pharmacheck
+     */
+    public function novacheck(Request $request)
+    {
+        $nova = Nova::find($request->input('nova_id'));
+        if (!$nova) return response('Unknown nova',400);
+
+        $drugsheet = Drugsheet::find($request->input('drugsheet_id'));
+        if (!$drugsheet) return response('Unknown drugsheet',400);
+
+        $novacheck = NovaCheck::where('date', $request->input('date'))
+            ->where('nova_id', $nova->id)
+            ->where('drugsheet_id', $drugsheet->id)->first();
+
+        if (!$novacheck) { // Initialize new one
+            $novacheck = new NovaCheck();
+            $novacheck->date = $request->input('date');
+            $novacheck->nova_id = $nova->id;
+            $novacheck->drugsheet_id = $this->id;
+        }
+        $novacheck->start = $request->input('start'); // TODO ignore redefinition of the values
+        $novacheck->end = $request->input('end');
+        $novacheck->save();
 
         return response('Ok');
     }
