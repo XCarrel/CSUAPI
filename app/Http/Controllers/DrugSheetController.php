@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\DrugsheetResource;
+use App\Models\Batch;
 use App\Models\Drugsheet;
 use Illuminate\Http\Request;
 
@@ -84,10 +85,23 @@ class DrugSheetController extends Controller
         //
     }
 
+    public function getMissingPharmaChecksForBase($base_id) {
+        // Get the active drugsheet for the given base
+        $activeSheet = Drugsheet::where('base_id', $base_id)->whereHas('status', function ($q) {
+            $q->where('slug', 'open');
+        })->first();
+
+        return $activeSheet->missingPharmaChecks();
+    }
+
     public function pharmacheck(Request $request)
     {
-        $batch_id = $request->input('batch_id');
-        $drugsheet_id = $request->input('drugsheet_id');
+        $batch = Batch::find($request->input('batch_id'));
+        if (!$batch) return response('Unknown batch',400);
+
+        $drugsheet = Drugsheet::find($request->input('drugsheet_id'));
+        if (!$drugsheet) return response('Unknown drugsheet',400);
+
         dd(compact('batch_id','drugsheet_id'));
         return response('Ok');
     }

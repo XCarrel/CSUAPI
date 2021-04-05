@@ -24,6 +24,7 @@ Route::post('gettoken',[UserController::class,'getToken']);
 Route::middleware('auth:api')->group(function () {
     Route::get('getreports',[UserController::class,'myReports']);
     Route::get('getactivedrugsheet/{baseid}',[BaseController::class,'getActiveDrugsheet']);
+    Route::get('missingpharmachecks/{baseid}',[DrugSheetController::class,'getMissingPharmaChecksForBase']);
     Route::post('pharmacheck',[DrugSheetController::class,'pharmacheck']);
     Route::post('novacheck',[DrugSheetController::class,'novacheck']);
     Route::resources([

@@ -15,7 +15,4 @@ use App\Models\Drugsheet;
 |
 */
 
-Route::get('/', function () {
-    dd(Drugsheet::filledBy(User::find(102)));
-    return view('welcome');
-});
+Route::get('/', function () { return "Hello"; });
