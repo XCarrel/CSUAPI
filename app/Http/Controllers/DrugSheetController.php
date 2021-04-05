@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Resources\DrugsheetResource;
 use App\Models\Batch;
+use App\Models\Drug;
+use App\Models\Nova;
+use App\Models\NovaCheck;
 use App\Models\Drugsheet;
 use App\Models\PharmaCheck;
 use Illuminate\Http\Request;
@@ -149,10 +152,14 @@ class DrugSheetController extends Controller
         $nova = Nova::find($request->input('nova_id'));
         if (!$nova) return response('Unknown nova',400);
 
+        $drug = Drug::find($request->input('drug_id'));
+        if (!$nova) return response('Unknown drug',400);
+
         $drugsheet = Drugsheet::find($request->input('drugsheet_id'));
         if (!$drugsheet) return response('Unknown drugsheet',400);
 
         $novacheck = NovaCheck::where('date', $request->input('date'))
+            ->where('drug_id', $drug->id)
             ->where('nova_id', $nova->id)
             ->where('drugsheet_id', $drugsheet->id)->first();
 
@@ -160,6 +167,7 @@ class DrugSheetController extends Controller
             $novacheck = new NovaCheck();
             $novacheck->date = $request->input('date');
             $novacheck->nova_id = $nova->id;
+            $novacheck->drug_id = $drug->id;
             $novacheck->drugsheet_id = $this->id;
         }
         $novacheck->start = $request->input('start'); // TODO ignore redefinition of the values
