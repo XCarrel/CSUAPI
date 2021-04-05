@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Drug extends Model
 {
     use HasFactory;
+
+    public $timestamps = false;
+
 }

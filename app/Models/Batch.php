@@ -9,6 +9,8 @@ class Batch extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
     public function drug()
     {
         return $this->belongsTo(Drug::class);
