@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\DrugsheetResource;
 use App\Models\Batch;
 use App\Models\Drugsheet;
+use App\Models\PharmaCheck;
 use Illuminate\Http\Request;
 
 class DrugSheetController extends Controller
@@ -102,7 +103,20 @@ class DrugSheetController extends Controller
         $drugsheet = Drugsheet::find($request->input('drugsheet_id'));
         if (!$drugsheet) return response('Unknown drugsheet',400);
 
-        dd(compact('batch_id','drugsheet_id'));
+        $pharmacheck = PharmaCheck::where('date', $request->input('date'))
+            ->where('batch_id', $batch->id)
+            ->where('drugsheet_id', $drugsheet->id)->first();
+
+        if (!$pharmacheck) { // Initialize new one
+            $pharmacheck = new PharmaCheck();
+            $pharmacheck->date = $request->input('date');
+            $pharmacheck->batch_id = $batch->id;
+            $pharmacheck->drugsheet_id = $this->id;
+        }
+        $pharmacheck->start = $request->input('start'); // TODO ignore redefinition of the values
+        $pharmacheck->end = $request->input('end');
+        $pharmacheck->save();
+
         return response('Ok');
     }
 }
