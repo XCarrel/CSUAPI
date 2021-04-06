@@ -26,11 +26,11 @@ class UserController extends Controller
         $user = User::where('initials', $initials)->first();
         if ($user) {
             if (password_verify($password, $user->password)) {
-                if (!$user->token) { // generate a new token
-                    $user->token = Str::random(60);
+                if (!$user->api_token) { // generate a new token
+                    $user->api_token = Str::random(60);
                     $user->save();
                 }
-                return json_encode(['token' => $user->token]); // Login success
+                return json_encode(['token' => $user->api_token]); // Login success
             } else {
                 return response('Invalid credentials', 401); // bad password
             }
