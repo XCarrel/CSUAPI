@@ -14,6 +14,10 @@ class DrugsheetResource extends JsonResource
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'id' => $this->id,
+            'week' => $this->week,
+            'base' => $this->base->name
+        ];
     }
 }
