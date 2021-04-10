@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Resources\DrugsheetResource;
+use App\Http\Resources\ShiftactionResource;
 use App\Http\Resources\ShiftsheetResource;
 use App\Models\Drugsheet;
 use App\Models\Shiftsheet;
@@ -45,5 +46,12 @@ class UserController extends Controller
             "shift" => ShiftsheetResource::collection(Shiftsheet::employing(Auth::user())),
             "drug" => DrugsheetResource::collection(Drugsheet::filledBy(Auth::user()))
         ];
+    }
+
+    public function myActionsInShiftReport($id)
+    {
+        $sheet = Shiftsheet::find($id);
+        if (!$sheet) return response ('Unknown report',404);
+        return ShiftactionResource::collection($sheet->myActions());
     }
 }

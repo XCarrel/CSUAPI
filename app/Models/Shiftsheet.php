@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class Shiftsheet extends Model
 {
@@ -27,6 +28,11 @@ class Shiftsheet extends Model
         })->orWhereHas('nightTeammate', function ($q) use($user) {
             $q->where('id', $user->id);
         })->get();
+    }
+
+    function myActions ()
+    {
+        return ShiftCheck::where('shiftsheet_id',$this->id)->where('user_id',Auth::user()->id)->with('action')->get();
     }
 
     //=========================== Basic Eloquent relationships
