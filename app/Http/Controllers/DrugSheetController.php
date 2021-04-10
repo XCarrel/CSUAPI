@@ -20,7 +20,7 @@ class DrugSheetController extends Controller
      */
     public function index()
     {
-        return Drugsheet::with(['base','status'])->get();
+        return Drugsheet::with(['base', 'status'])->get();
     }
 
     /**
@@ -36,7 +36,7 @@ class DrugSheetController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -47,18 +47,18 @@ class DrugSheetController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        return Drugsheet::with(['base','status'])->where('id',$id)->get();
+        return Drugsheet::with(['base', 'status'])->where('id', $id)->get();
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -69,8 +69,8 @@ class DrugSheetController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -81,7 +81,7 @@ class DrugSheetController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
@@ -90,16 +90,23 @@ class DrugSheetController extends Controller
     }
 
     /**
-     * Returns all pharmachecks of the active sheet of a base that are:
+     * Returns all drug checks (pharma and nova) of the active sheet of a base that are:
      * - incomplete (missing start OR end value)
      * - not in the future
      */
-    public function getMissingPharmaChecksForBase($base_id) {
+    public function getMissingChecksForBase($base_id)
+    {
         // Get the active drugsheet for the given base
         $activeSheet = Drugsheet::where('base_id', $base_id)->whereHas('status', function ($q) {
             $q->where('slug', 'open');
         })->first();
-        return $activeSheet ? $activeSheet->missingPharmaChecks() : null;
+
+        if (!$activeSheet) return null; // not necessarily a bad request.
+
+        return [
+            "pharma" => $activeSheet->missingPharmaChecks(),
+            "nova" => $activeSheet->missingNovaChecks()
+        ];
     }
 
     /**
@@ -108,10 +115,10 @@ class DrugSheetController extends Controller
     public function pharmacheck(Request $request)
     {
         $batch = Batch::find($request->input('batch_id'));
-        if (!$batch) return response('Unknown batch',400);
+        if (!$batch) return response('Unknown batch', 400);
 
         $drugsheet = Drugsheet::find($request->input('drugsheet_id'));
-        if (!$drugsheet) return response('Unknown drugsheet',400);
+        if (!$drugsheet) return response('Unknown drugsheet', 400);
 
         $pharmacheck = PharmaCheck::where('date', $request->input('date'))
             ->where('batch_id', $batch->id)
@@ -131,32 +138,18 @@ class DrugSheetController extends Controller
     }
 
     /**
-     * Returns all novachecks of the active sheet of a base that are:
-     * - incomplete (missing start OR end value)
-     * - not in the future
-     */
-
-    public function getMissingNovaChecksForBase($base_id) {
-        // Get the active drugsheet for the given base
-        $activeSheet = Drugsheet::where('base_id', $base_id)->whereHas('status', function ($q) {
-            $q->where('slug', 'open');
-        })->first();
-        return $activeSheet ? $activeSheet->missingNovaChecks() : null;
-    }
-
-    /**
      * Processes a POST request that provides data for a pharmacheck
      */
     public function novacheck(Request $request)
     {
         $nova = Nova::find($request->input('nova_id'));
-        if (!$nova) return response('Unknown nova',400);
+        if (!$nova) return response('Unknown nova', 400);
 
         $drug = Drug::find($request->input('drug_id'));
-        if (!$nova) return response('Unknown drug',400);
+        if (!$nova) return response('Unknown drug', 400);
 
         $drugsheet = Drugsheet::find($request->input('drugsheet_id'));
-        if (!$drugsheet) return response('Unknown drugsheet',400);
+        if (!$drugsheet) return response('Unknown drugsheet', 400);
 
         $novacheck = NovaCheck::where('date', $request->input('date'))
             ->where('drug_id', $drug->id)
