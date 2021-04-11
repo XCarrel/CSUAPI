@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Base;
 use App\Models\Drugsheet;
 use Illuminate\Http\Request;
 
@@ -13,5 +14,9 @@ class BaseController extends Controller
             $q->where('slug', 'open');
         })->with(['batches', 'novas', 'batches.drug'])->get();
         return $res;
+    }
+
+    public function index() {
+        return Base::orderBy('name')->get();
     }
 }

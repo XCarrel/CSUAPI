@@ -107,7 +107,7 @@ class Drugsheet extends Model
 
         $res = [];
         for ($dow = 0; $dow < 7; $dow++) {
-            if ($dayOfSheet->equalTo(Carbon::tomorrow())) break; // don't list future days
+            if ($dayOfSheet->greaterThan(Carbon::today())) break; // don't list future days
             foreach ($this->batches as $batch) {
                 $pharmacheck = PharmaCheck::where('date', $dayOfSheet->toDateString('Y-m-d'))
                     ->where('batch_id', $batch->id)

@@ -22,10 +22,11 @@ use App\Http\Controllers\BaseController;
 Route::post('gettoken',[UserController::class,'getToken']);
 
 Route::middleware('auth:api')->group(function () {
-    Route::get('getreports',[UserController::class,'myReports']);
-    Route::get('getmyactionsinshift/{id}',[UserController::class,'myActionsInShiftReport']);
-    Route::get('getactivedrugsheet/{baseid}',[BaseController::class,'getActiveDrugsheet']);
+    Route::get('reports',[UserController::class,'myReports']);
+    Route::get('myactionsinshift/{id}',[UserController::class,'myActionsInShiftReport']);
+    Route::get('activedrugsheet/{baseid}',[BaseController::class,'getActiveDrugsheet']);
     Route::get('missingchecks/{baseid}',[DrugSheetController::class,'getMissingChecksForBase']);
+    Route::get('bases',[BaseController::class,'index']);
     Route::post('pharmacheck',[DrugSheetController::class,'pharmacheck']);
     Route::post('novacheck',[DrugSheetController::class,'novacheck']);
     Route::resources([
