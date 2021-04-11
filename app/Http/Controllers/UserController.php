@@ -21,9 +21,8 @@ class UserController extends Controller
     public function getToken(Request $request)
     {
         if (env('APP_DEBUG')) Log::info(__METHOD__);
-        // don't know why, but React sends arrays in inputs
-        extract($request->input('initials')); // $initials
-        extract($request->input('password')); // $password
+        $initials = $request->input('initials');
+        $password = $request->input('password');
         $user = User::where('initials', $initials)->first();
         if ($user) {
             if (password_verify($password, $user->password)) {
