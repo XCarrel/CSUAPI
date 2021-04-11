@@ -20,13 +20,13 @@ use App\Http\Controllers\BaseController;
 */
 
 Route::post('gettoken',[UserController::class,'getToken']);
+Route::get('bases',[BaseController::class,'index']); // bases are needed for login -> route unprotected
 
 Route::middleware('auth:api')->group(function () {
     Route::get('reports',[UserController::class,'myReports']);
     Route::get('myactionsinshift/{id}',[UserController::class,'myActionsInShiftReport']);
     Route::get('activedrugsheet/{baseid}',[BaseController::class,'getActiveDrugsheet']);
     Route::get('missingchecks/{baseid}',[DrugSheetController::class,'getMissingChecksForBase']);
-    Route::get('bases',[BaseController::class,'index']);
     Route::post('pharmacheck',[DrugSheetController::class,'pharmacheck']);
     Route::post('novacheck',[DrugSheetController::class,'novacheck']);
     Route::resources([
