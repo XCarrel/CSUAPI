@@ -6,6 +6,7 @@ use App\Http\Controllers\ShiftSheetController;
 use App\Http\Controllers\TodoSheetController;
 use App\Http\Controllers\DrugSheetController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\BaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +20,20 @@ use App\Http\Controllers\UserController;
 */
 
 Route::post('gettoken',[UserController::class,'getToken']);
-Route::get('getreports',[UserController::class,'myReports']);
+Route::get('bases',[BaseController::class,'index']); // bases are needed for login -> route unprotected
 
-Route::resources([
-    'shiftsheets' => ShiftSheetController::class,
-    'todosheets' => TodoSheetController::class,
-    'drugsheets' => DrugSheetController::class,
-]);
-
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('auth:api')->group(function () {
+    Route::get('reports',[UserController::class,'myReports']);
+    Route::get('myactionsinshift/{id}',[UserController::class,'myActionsInShiftReport']);
+    Route::get('activedrugsheet/{baseid}',[BaseController::class,'getActiveDrugsheet']);
+    Route::get('missingchecks/{baseid}',[DrugSheetController::class,'getMissingChecksForBase']);
+    Route::post('pharmacheck',[DrugSheetController::class,'pharmacheck']);
+    Route::post('novacheck',[DrugSheetController::class,'novacheck']);
+    // Don't use Route::resources([]) because ->register() is needed for
+    Route::resource('shiftsheets', ShiftSheetController::class)->register();
+    Route::resource('todosheets', TodoSheetController::class)->register();
+    Route::resource('drugsheets', DrugSheetController::class)->register();
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
 });

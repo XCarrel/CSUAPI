@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class DrugsheetResource extends JsonResource
+class ShiftactionResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,8 +16,9 @@ class DrugsheetResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'week' => $this->week,
-            'base' => $this->base->name
+            'at' => $this->time,
+            'day' => $this->day,
+            'action' => $this->action->text
         ];
     }
 }
