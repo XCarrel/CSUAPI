@@ -29,11 +29,10 @@ Route::middleware('auth:api')->group(function () {
     Route::get('missingchecks/{baseid}',[DrugSheetController::class,'getMissingChecksForBase']);
     Route::post('pharmacheck',[DrugSheetController::class,'pharmacheck']);
     Route::post('novacheck',[DrugSheetController::class,'novacheck']);
-    Route::resources([
-        'shiftsheets' => ShiftSheetController::class,
-        'todosheets' => TodoSheetController::class,
-        'drugsheets' => DrugSheetController::class,
-    ]);
+    // Don't use Route::resources([]) because ->register() is needed for
+    Route::resource('shiftsheets', ShiftSheetController::class)->register();
+    Route::resource('todosheets', TodoSheetController::class)->register();
+    Route::resource('drugsheets', DrugSheetController::class)->register();
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
