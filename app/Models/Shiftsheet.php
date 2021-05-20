@@ -19,13 +19,9 @@ class Shiftsheet extends Model
      */
     static function employing(User $user)
     {
-        return Shiftsheet::whereHas('dayBoss', function ($q) use($user) {
-            $q->where('id', $user->id);
-        })->orWhereHas('nightBoss', function ($q) use($user) {
-            $q->where('id', $user->id);
-        })->orWhereHas('dayTeammate', function ($q) use($user) {
-            $q->where('id', $user->id);
-        })->orWhereHas('nightTeammate', function ($q) use($user) {
+        return Shiftsheet::whereHas('teams', function ($q) use($user) {
+            $q->where('boss_id', $user->id);
+        })->orWhereHas('teams', function ($q) use($user) {
             $q->where('id', $user->id);
         })->get();
     }
@@ -45,24 +41,8 @@ class Shiftsheet extends Model
         return $this->belongsTo(Base::class);
     }
 
-    public function dayBoss()
-    {
-        return $this->belongsTo(User::class, 'dayboss_id');
-    }
-
-    public function nightBoss()
-    {
-        return $this->belongsTo(User::class, 'nightboss_id');
-    }
-
-    public function dayTeammate()
-    {
-        return $this->belongsTo(User::class, 'dayteammate_id');
-    }
-
-    public function nightTeammate()
-    {
-        return $this->belongsTo(User::class, 'nightteammate_id');
+    public function teams() {
+        return $this->hasMany(ShiftTeam::class);
     }
 
 }
