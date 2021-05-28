@@ -471,6 +471,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `lastname` varchar(45) NOT NULL,
   `initials` varchar(45) NOT NULL,
   `password` varchar(100) NOT NULL,
+  `api_token` varchar(200),
   `admin` tinyint NOT NULL,
   `firstconnect` tinyint NOT NULL,
   `email` varchar(254) DEFAULT NULL,
