@@ -51,7 +51,6 @@ class MakeUser extends Command
         } catch (\Exception $e) {
             echo "Error creating user\n({$e->getMessage()})\n";
         }
-        echo $this->argument('password');
         return 0;
     }
 }
