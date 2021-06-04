@@ -103,7 +103,20 @@ UNLOCK TABLES;
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'Admin','istrateur','ANW','$2y$10$IUpQUnMhzPXSD62922qKquT4ByP1PylV/7YbLBg9FlQJkLlXbE9XO',1,1,NULL,NULL,NULL),(2,'Dimitri','Imfeld','DID','$2y$10$d1L1EeKInZE78BORj6PlzO3aIeDBMs79W5tZMyyhWVeNgKs9UU8NC',0,0,NULL,NULL,'XRt5n6zoAl1uRopkcoE6DOgWaCkhFWhm3mJJpGnC07QoX8drElz3BsVTm8u6'),(3,'Alexandre','Philibert','APT','$2y$10$ymBRVyXglT5QbEAk4mcIdezmuuHTgixxezgkXWwwhoVB2w2thNcyu',1,0,NULL,NULL,NULL),(4,'Gabriel','Pereira','GPA','$2y$10$da9jIDSoU7.q8qeMn6NMFevcNVrg1dHe6MVLfTWNjzqL59agahkB6',1,0,NULL,'41792129621','naGvpju0HWmm6l5KgQL5mGwSZ61mxTSDXJEL3vT2Yt610Lm7ljIziHKpyWAl'),(5,'Dylan','Ramos','DOS','$2y$10$vnNkvDguaXeYQw0Hf6tCje.bCpN3tn9QyZLHNF04Ss9xbyuhD/7DS',1,0,NULL,'41791234567','KwRtj95v9YfrwI7rmSAtNFug32bx7JsibHjPvcwlc5ZuNRK6p8jXaMqu6sjj'),(6,'Andi','Santos','ASO','$2y$10$n6wns2OxbD3/9Yp/lhT6auZIiJ5yJj0QSlcxaVIPj8p7AeUNCx8v6',1,0,NULL,NULL,NULL),(7,'Quentin','Aellen','QAN','$2y$10$bAqW.Hl6ZoRXeqRKJZelfurz1baJF4HEbATVpNHqaRWb/lIVlnCoi',0,0,NULL,NULL,NULL),(8,'Yvann','Butticaz','YBZ','$2y$10$Fk6OJNzAQaoM9gWfPIxQOe4Va7HH6zGrlcqZ2eoB6kltYzHvbOr5O',0,0,NULL,NULL,NULL),(9,'Mathieu','Burnat','MBT','$2y$10$XU9JJpvC38c4YBrDnDYCA.QYAnyk4geocribgqMNR/zAHU1frIsNq',0,1,NULL,NULL,NULL),(10,'Cyril','Goldenschue','CGE','$2y$10$vPJrv/ZmyQHhpSx1WTTDbuYhDSd9z2ajf5Y6az1XwxvpzTXmHjT9.',0,0,NULL,NULL,NULL),(11,'Zaid','Schouwey','ZSY','$2y$10$kOVn1KVQEiC5p1736IwUou4uBAZMZMQSFJdnL8Ny0H/dNPh7j4Z9W',0,1,NULL,NULL,NULL),(12,'Gabriel','Rossier','GRR','$2y$10$.zAj0rdXp7x/rt0a1QElb.5VczaDu4IU38VxFdOMzcWtN9auyNrMy',0,0,NULL,NULL,NULL),(104,'William','Hausmann','WHN','$2y$10$AHBreoiRi.lmiJIH7cMaAupFItjPkI8xVc059qa9mpxTKsenJlHU2',0,0,NULL,NULL,'4CBIEIxkxf0f0d2G7slf62cXerFR6RqA6G2pytHErRZx9VrBMbg4UoOGI2cO');
+INSERT INTO `users` VALUES 
+(1,'Admin','istrateur','ANW','$2y$10$IUpQUnMhzPXSD62922qKquT4ByP1PylV/7YbLBg9FlQJkLlXbE9XO',NULL,1,1,NULL,NULL,NULL),
+(2,'Dimitri','Imfeld','DID','$2y$10$d1L1EeKInZE78BORj6PlzO3aIeDBMs79W5tZMyyhWVeNgKs9UU8NC',NULL,0,0,NULL,NULL,NULL),
+(3,'Alexandre','Philibert','APT','$2y$10$ymBRVyXglT5QbEAk4mcIdezmuuHTgixxezgkXWwwhoVB2w2thNcyu',NULL,1,0,NULL,NULL,NULL),
+(4,'Gabriel','Pereira','GPA','$2y$10$da9jIDSoU7.q8qeMn6NMFevcNVrg1dHe6MVLfTWNjzqL59agahkB6',NULL,1,0,NULL,NULL,NULL),
+(5,'Dylan','Ramos','DOS','$2y$10$vnNkvDguaXeYQw0Hf6tCje.bCpN3tn9QyZLHNF04Ss9xbyuhD/7DS',NULL,1,0,NULL,NULL,NULL),
+(6,'Andi','Santos','ASO','$2y$10$n6wns2OxbD3/9Yp/lhT6auZIiJ5yJj0QSlcxaVIPj8p7AeUNCx8v6',NULL,1,0,NULL,NULL,NULL),
+(7,'Quentin','Aellen','QAN','$2y$10$bAqW.Hl6ZoRXeqRKJZelfurz1baJF4HEbATVpNHqaRWb/lIVlnCoi',NULL,0,0,NULL,NULL,NULL),
+(8,'Yvann','Butticaz','YBZ','$2y$10$Fk6OJNzAQaoM9gWfPIxQOe4Va7HH6zGrlcqZ2eoB6kltYzHvbOr5O',NULL,0,0,NULL,NULL,NULL),
+(9,'Mathieu','Burnat','MBT','$2y$10$XU9JJpvC38c4YBrDnDYCA.QYAnyk4geocribgqMNR/zAHU1frIsNq',NULL,0,1,NULL,NULL,NULL),
+(10,'Cyril','Goldenschue','CGE','$2y$10$vPJrv/ZmyQHhpSx1WTTDbuYhDSd9z2ajf5Y6az1XwxvpzTXmHjT9.',NULL,0,0,NULL,NULL,NULL),
+(11,'Zaid','Schouwey','ZSY','$2y$10$kOVn1KVQEiC5p1736IwUou4uBAZMZMQSFJdnL8Ny0H/dNPh7j4Z9W',NULL,0,1,NULL,NULL,NULL),
+(12,'Gabriel','Rossier','GRR','$2y$10$.zAj0rdXp7x/rt0a1QElb.5VczaDu4IU38VxFdOMzcWtN9auyNrMy',NULL,0,0,NULL,NULL,NULL),
+(104,'William','Hausmann','WHN','$2y$10$AHBreoiRi.lmiJIH7cMaAupFItjPkI8xVc059qa9mpxTKsenJlHU2',NULL,0,0,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 
