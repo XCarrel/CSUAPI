@@ -477,6 +477,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `email` varchar(254) DEFAULT NULL,
   `mobileNumber` varchar(20) DEFAULT NULL,
   `number` int DEFAULT NULL,
+  `api_token` varchar(250) NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `initials_UNIQUE` (`initials`)
 ) ENGINE=InnoDB AUTO_INCREMENT=103 DEFAULT CHARSET=utf8mb4;
