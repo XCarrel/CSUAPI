@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Resources\DrugsheetResource;
 use App\Http\Resources\ShiftactionResource;
 use App\Http\Resources\ShiftsheetResource;
+use App\Models\Apitoken;
 use App\Models\Drugsheet;
 use App\Models\Shiftsheet;
 use Illuminate\Http\Request;
@@ -26,11 +27,14 @@ class UserController extends Controller
         $user = User::where('initials', $initials)->first();
         if ($user) {
             if (password_verify($password, $user->password)) {
-                if (!$user->api_token) { // generate a new token
-                    $user->api_token = Str::random(60);
-                    $user->save();
+                if (!$user->token) { // generate a new token
+                    $tok = new Apitoken();
+                    $tok->token = Str::random(60);
+                    $tok->owner()->associate($user);
+                    $tok->save();
+                    return json_encode(['token' => $tok->token]); // Login success
                 }
-                return json_encode(['token' => $user->api_token]); // Login success
+                return json_encode(['token' => $user->token->token]); // Login success
             } else {
                 return response('Invalid credentials', 401); // bad password
             }
