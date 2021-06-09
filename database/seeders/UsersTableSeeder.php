@@ -30,7 +30,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 1,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1001,
                 'api_token' => NULL,
             ),
             1 => 
@@ -44,7 +44,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1002,
                 'api_token' => 'sIqli5JQSesIFPgKtP5zD1ouTYlrS3xNjXiPfoXzIQpQQB3vzFHMvfEdqHOV',
             ),
             2 => 
@@ -58,7 +58,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1003,
                 'api_token' => 'lwkZObuxvOQDFfZgxRCcz9tp1Gfgm0IfwQHOHxSYXdVzb0GjiQh2ovqGKqZQ',
             ),
             3 => 
@@ -72,7 +72,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1004,
                 'api_token' => NULL,
             ),
             4 => 
@@ -86,7 +86,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1005,
                 'api_token' => NULL,
             ),
             5 => 
@@ -100,7 +100,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1006,
                 'api_token' => NULL,
             ),
             6 => 
@@ -114,7 +114,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1007,
                 'api_token' => NULL,
             ),
             7 => 
@@ -128,7 +128,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1008,
                 'api_token' => NULL,
             ),
             8 => 
@@ -142,7 +142,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 1,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1009,
                 'api_token' => NULL,
             ),
             9 => 
@@ -156,7 +156,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1010,
                 'api_token' => NULL,
             ),
             10 => 
@@ -170,7 +170,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 1,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1011,
                 'api_token' => NULL,
             ),
             11 => 
@@ -184,7 +184,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1012,
                 'api_token' => NULL,
             ),
             12 => 
@@ -198,7 +198,7 @@ class UsersTableSeeder extends Seeder
                 'firstconnect' => 0,
                 'email' => NULL,
                 'mobileNumber' => NULL,
-                'number' => NULL,
+                'number' => 1104,
                 'api_token' => NULL,
             ),
         ));
