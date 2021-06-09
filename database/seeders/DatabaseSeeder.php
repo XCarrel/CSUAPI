@@ -35,8 +35,8 @@ class DatabaseSeeder extends Seeder
         $this->call(ShiftcommentsTableSeeder::class);
         $this->call(ShiftteamsTableSeeder::class);
         $this->call(TodothingsTableSeeder::class);
-        $this->call(TodosTableSeeder::class);
         $this->call(TodosheetsTableSeeder::class);
+        $this->call(TodosTableSeeder::class);
         $this->call(TokensTableSeeder::class);
     }
 }
