@@ -13,11 +13,6 @@ class User extends Authenticatable
 
     public $timestamps = false;
 
-    public function token()
-    {
-        return $this->hasOne(Apitoken::class);
-    }
-
     /**
      * The attributes that are mass assignable.
      *
