@@ -10,6 +10,7 @@ use App\Models\NovaCheck;
 use App\Models\Drugsheet;
 use App\Models\PharmaCheck;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DrugSheetController extends Controller
 {
@@ -128,7 +129,8 @@ class DrugSheetController extends Controller
             $pharmacheck = new PharmaCheck();
             $pharmacheck->date = $request->input('date');
             $pharmacheck->batch_id = $batch->id;
-            $pharmacheck->drugsheet_id = $this->id;
+            $pharmacheck->user_id = Auth::user()->id;
+            $pharmacheck->drugsheet_id = $drugsheet->id;
         }
         $pharmacheck->start = $request->input('start'); // TODO ignore redefinition of the values
         $pharmacheck->end = $request->input('end');
@@ -161,7 +163,8 @@ class DrugSheetController extends Controller
             $novacheck->date = $request->input('date');
             $novacheck->nova_id = $nova->id;
             $novacheck->drug_id = $drug->id;
-            $novacheck->drugsheet_id = $this->id;
+            $novacheck->user_id = Auth::user()->id;
+            $novacheck->drugsheet_id = $drugsheet->id;
         }
         $novacheck->start = $request->input('start'); // TODO ignore redefinition of the values
         $novacheck->end = $request->input('end');
