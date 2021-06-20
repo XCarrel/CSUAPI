@@ -45,6 +45,6 @@ class User extends Authenticatable
 
     public function workplans()
     {
-        return $this->hasMany(Workplanning::class);
+        return $this->hasMany(Workplanning::class)->orderBy('date');
     }
 }

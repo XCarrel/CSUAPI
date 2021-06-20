@@ -20,4 +20,9 @@ class Workplanning extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function worktime()
+    {
+        return $this->belongsTo(Worktime::class);
+    }
 }

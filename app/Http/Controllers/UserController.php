@@ -60,9 +60,10 @@ class UserController extends Controller
      */
     public function myUnconfirmedWorkplans()
     {
-        return Auth::user()->workplans->filter(function($wp) {
+        return array_values(Auth::user()->workplans()->with('worktime')->get()->filter(function($wp) {
             return $wp->isUnconfirmed();
-        });
+        })->all());
+        // I used array_values because otherwise, with non-consecutive indices, the return format is altered
     }
 
     /**
