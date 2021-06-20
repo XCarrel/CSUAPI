@@ -81,6 +81,17 @@ class UserController extends Controller
         $val = intval($request->input('confirmation'));
         if ($val < 0 || $val > 1) return response('Bad value', 400);
 
+        $reason = $request->input('reason');
+        if ($val ==0) {
+            if (strlen($reason) < 10) { // reason is too short to be acceptable
+                return response('Invalid reason', 400);
+            } else {
+                $wp->reason = $reason;
+            }
+        } else {
+            $wp->reason = null; // don't keep a reason that is unrelated to the OK status
+        }
+
         $wp->confirmation = $val;
         $wp->save();
 
