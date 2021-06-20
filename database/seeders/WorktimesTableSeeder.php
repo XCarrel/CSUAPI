@@ -14,12 +14,12 @@ class WorktimesTableSeeder extends Seeder
      */
     public function run()
     {
-        
+
 
         \DB::table('worktimes')->delete();
-        
+
         \DB::table('worktimes')->insert(array (
-            0 => 
+            0 =>
             array (
                 'id' => 1,
                 'code' => 322,
@@ -27,7 +27,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 0,
                 'base_id' => 1,
             ),
-            1 => 
+            1 =>
             array (
                 'id' => 2,
                 'code' => 305,
@@ -35,15 +35,15 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 1,
                 'base_id' => 3,
             ),
-            2 => 
+            2 =>
             array (
                 'id' => 3,
                 'code' => 503,
-                'type' => 'Reprise heures complémentaires',
+                'type' => 'Reprise HC',
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            3 => 
+            3 =>
             array (
                 'id' => 4,
                 'code' => 4057,
@@ -51,7 +51,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 0,
                 'base_id' => 1,
             ),
-            4 => 
+            4 =>
             array (
                 'id' => 5,
                 'code' => 307,
@@ -59,7 +59,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 1,
                 'base_id' => 1,
             ),
-            5 => 
+            5 =>
             array (
                 'id' => 6,
                 'code' => 314,
@@ -67,15 +67,15 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 1,
                 'base_id' => 1,
             ),
-            6 => 
+            6 =>
             array (
                 'id' => 7,
                 'code' => 402,
-                'type' => 'Formation externe à 08h18',
+                'type' => 'Formation',
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            7 => 
+            7 =>
             array (
                 'id' => 8,
                 'code' => 320,
@@ -83,7 +83,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 0,
                 'base_id' => 3,
             ),
-            8 => 
+            8 =>
             array (
                 'id' => 9,
                 'code' => 304,
@@ -91,7 +91,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 1,
                 'base_id' => 2,
             ),
-            9 => 
+            9 =>
             array (
                 'id' => 10,
                 'code' => 306,
@@ -99,7 +99,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 1,
                 'base_id' => 5,
             ),
-            10 => 
+            10 =>
             array (
                 'id' => 11,
                 'code' => 502,
@@ -107,7 +107,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            11 => 
+            11 =>
             array (
                 'id' => 12,
                 'code' => 501,
@@ -115,7 +115,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            12 => 
+            12 =>
             array (
                 'id' => 13,
                 'code' => 317,
@@ -123,7 +123,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 0,
                 'base_id' => 4,
             ),
-            13 => 
+            13 =>
             array (
                 'id' => 14,
                 'code' => 301,
@@ -131,7 +131,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 1,
                 'base_id' => 4,
             ),
-            14 => 
+            14 =>
             array (
                 'id' => 15,
                 'code' => 302,
@@ -139,7 +139,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 1,
                 'base_id' => 4,
             ),
-            15 => 
+            15 =>
             array (
                 'id' => 16,
                 'code' => 519,
@@ -147,7 +147,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            16 => 
+            16 =>
             array (
                 'id' => 17,
                 'code' => 319,
@@ -155,7 +155,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 0,
                 'base_id' => 2,
             ),
-            17 => 
+            17 =>
             array (
                 'id' => 18,
                 'code' => 112,
@@ -163,7 +163,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            18 => 
+            18 =>
             array (
                 'id' => 19,
                 'code' => 400,
@@ -171,7 +171,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            19 => 
+            19 =>
             array (
                 'id' => 20,
                 'code' => 324,
@@ -179,7 +179,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => 4,
             ),
-            20 => 
+            20 =>
             array (
                 'id' => 21,
                 'code' => 600,
@@ -187,7 +187,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            21 => 
+            21 =>
             array (
                 'id' => 22,
                 'code' => 505,
@@ -195,7 +195,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            22 => 
+            22 =>
             array (
                 'id' => 23,
                 'code' => 321,
@@ -203,7 +203,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => 0,
                 'base_id' => 5,
             ),
-            23 => 
+            23 =>
             array (
                 'id' => 24,
                 'code' => 504,
@@ -211,7 +211,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            24 => 
+            24 =>
             array (
                 'id' => 25,
                 'code' => 614,
@@ -219,7 +219,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            25 => 
+            25 =>
             array (
                 'id' => 26,
                 'code' => 609,
@@ -227,7 +227,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            26 => 
+            26 =>
             array (
                 'id' => 27,
                 'code' => 516,
@@ -235,7 +235,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            27 => 
+            27 =>
             array (
                 'id' => 28,
                 'code' => 405,
@@ -243,7 +243,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            28 => 
+            28 =>
             array (
                 'id' => 29,
                 'code' => 403,
@@ -251,7 +251,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            29 => 
+            29 =>
             array (
                 'id' => 30,
                 'code' => 506,
@@ -259,7 +259,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            30 => 
+            30 =>
             array (
                 'id' => 31,
                 'code' => 509,
@@ -267,7 +267,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            31 => 
+            31 =>
             array (
                 'id' => 32,
                 'code' => 511,
@@ -275,7 +275,7 @@ class WorktimesTableSeeder extends Seeder
                 'day' => NULL,
                 'base_id' => NULL,
             ),
-            32 => 
+            32 =>
             array (
                 'id' => 33,
                 'code' => 604,
@@ -284,7 +284,7 @@ class WorktimesTableSeeder extends Seeder
                 'base_id' => NULL,
             ),
         ));
-        
-        
+
+
     }
 }

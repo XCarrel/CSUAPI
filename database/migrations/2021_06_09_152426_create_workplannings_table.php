@@ -18,6 +18,7 @@ class CreateWorkplanningsTable extends Migration {
 			$table->integer('worktime_id')->nullable()->index('fk_worktime_id');
 			$table->integer('user_id')->nullable()->index('fk_user_id');
 			$table->date('date');
+            $table->unique(['date','user_id'], 'unique_workplan');
 		});
 	}
 
