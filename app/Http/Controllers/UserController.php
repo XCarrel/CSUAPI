@@ -53,4 +53,14 @@ class UserController extends Controller
         if (!$sheet) return response ('Unknown report',404);
         return ShiftactionResource::collection($sheet->myActions());
     }
+
+    /**
+     * return (API) all workplannings that are not OK, i.e: not responded yet or reported as not OK
+     */
+    public function myUnconfirmedWorkplans()
+    {
+        return Auth::user()->workplans->filter(function($wp) {
+            return $wp->isUnconfirmed();
+        });
+    }
 }

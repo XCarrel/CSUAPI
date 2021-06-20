@@ -11,6 +11,11 @@ class Workplanning extends Model
 
     public $timestamps = false;
 
+    public function isUnconfirmed()
+    {
+        return !($this->confirmation === 1);
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -24,6 +24,7 @@ Route::get('bases',[BaseController::class,'index']); // bases are needed for log
 
 Route::middleware('auth:api')->group(function () {
     Route::get('reports',[UserController::class,'myReports']);
+    Route::get('unconfirmedworkplans',[UserController::class,'myUnconfirmedWorkplans']);
     Route::get('myactionsinshift/{id}',[UserController::class,'myActionsInShiftReport']);
     Route::get('activedrugsheet/{baseid}',[BaseController::class,'getActiveDrugsheet']);
     Route::get('missingchecks/{baseid}',[DrugSheetController::class,'getMissingChecksForBase']);
