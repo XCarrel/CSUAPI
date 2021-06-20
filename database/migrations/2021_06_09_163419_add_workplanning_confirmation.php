@@ -15,6 +15,7 @@ class AddWorkplanningConfirmation extends Migration
     {
         Schema::table('workplannings', function($table) {
             $table->integer('confirmation')->nullable()->comment('null=no response, 0=not OK, 1 = OK');
+            $table->string('reason', 50)->nullable()->comment('decribe why it is not OK');
         });
     }
 
