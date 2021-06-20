@@ -7,6 +7,7 @@ use App\Http\Resources\ShiftactionResource;
 use App\Http\Resources\ShiftsheetResource;
 use App\Models\Drugsheet;
 use App\Models\Shiftsheet;
+use App\Models\Workplanning;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
@@ -62,5 +63,26 @@ class UserController extends Controller
         return Auth::user()->workplans->filter(function($wp) {
             return $wp->isUnconfirmed();
         });
+    }
+
+    /**
+     * Allow mobile app to provide confirmation value
+     * @param Request $request (POST)
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\Routing\ResponseFactory|\Illuminate\Http\Response
+     */
+    public function confirmWorkplan(Request $request)
+    {
+        $wp = Workplanning::find($request->input('id'));
+        if (!$wp) return response('Unknown workplan', 400);
+
+        if ($wp->user->id != Auth::user()->id) return response('None of your business', 401);
+
+        $val = intval($request->input('confirmation'));
+        if ($val < 0 || $val > 1) return response('Bad value', 400);
+
+        $wp->confirmation = $val;
+        $wp->save();
+
+        return response('Ok');
     }
 }
