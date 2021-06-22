@@ -1,0 +1,240 @@
+Matricule;Identificateur;Date;Service;Fonction;Code PA;D�signation
+;;;;;;
+1001;XXX;01.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1001;XXX;03.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1001;XXX;04.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1001;XXX;07.06.2021;CSU;Resp. exploitation site;400;Divers institutionnels
+1001;XXX;08.06.2021;CSU;Resp. exploitation site;501;Vacances
+1001;XXX;09.06.2021;CSU;Resp. exploitation site;501;Vacances
+1001;XXX;10.06.2021;CSU;Resp. exploitation site;501;Vacances
+1001;XXX;11.06.2021;CSU;Resp. exploitation site;501;Vacances
+1001;XXX;14.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1001;XXX;15.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1001;XXX;16.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1001;XXX;17.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1001;XXX;18.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1001;XXX;21.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1001;XXX;22.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1001;XXX;23.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1001;XXX;24.06.2021;CSU;Resp. exploitation site;324;Horaire Payerne
+1001;XXX;25.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1001;XXX;28.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1001;XXX;29.06.2021;CSU;Resp. exploitation site;301;Horaire 1 - Jour Payerne
+1001;XXX;01.07.2021;CSU;Resp. exploitation site;402;Formation externe � 08h18
+1002;XXX;01.06.2021;CSU;Technicien ambulancier;301;Horaire 1 - Jour Payerne
+1002;XXX;04.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1002;XXX;05.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1002;XXX;06.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1002;XXX;07.06.2021;CSU;Technicien ambulancier;400;Divers institutionnels
+1002;XXX;09.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1002;XXX;10.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+1002;XXX;14.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1002;XXX;15.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1002;XXX;18.06.2021;CSU;Technicien ambulancier;305;Horaire 5 - Jour St-Loup
+1002;XXX;23.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1002;XXX;24.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1002;XXX;28.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1002;XXX;29.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+
+1003;XXX;01.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1003;XXX;03.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1003;XXX;04.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1003;XXX;07.06.2021;CSU;Resp. exploitation site;400;Divers institutionnels
+1003;XXX;08.06.2021;CSU;Resp. exploitation site;501;Vacances
+1003;XXX;09.06.2021;CSU;Resp. exploitation site;501;Vacances
+1003;XXX;10.06.2021;CSU;Resp. exploitation site;501;Vacances
+1003;XXX;11.06.2021;CSU;Resp. exploitation site;501;Vacances
+1003;XXX;14.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1003;XXX;15.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1003;XXX;16.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1003;XXX;17.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1003;XXX;18.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1003;XXX;21.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1003;XXX;22.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1003;XXX;23.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1003;XXX;24.06.2021;CSU;Resp. exploitation site;324;Horaire Payerne
+1003;XXX;25.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1003;XXX;28.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1003;XXX;29.06.2021;CSU;Resp. exploitation site;301;Horaire 1 - Jour Payerne
+1003;XXX;01.07.2021;CSU;Resp. exploitation site;402;Formation externe � 08h18
+1004;XXX;01.06.2021;CSU;Technicien ambulancier;301;Horaire 1 - Jour Payerne
+1004;XXX;04.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1004;XXX;05.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1004;XXX;06.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1004;XXX;07.06.2021;CSU;Technicien ambulancier;400;Divers institutionnels
+1004;XXX;09.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1004;XXX;10.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+1004;XXX;14.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1004;XXX;15.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1004;XXX;18.06.2021;CSU;Technicien ambulancier;305;Horaire 5 - Jour St-Loup
+1004;XXX;23.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1004;XXX;24.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1004;XXX;28.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1004;XXX;29.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+
+1005;XXX;01.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1005;XXX;03.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1005;XXX;04.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1005;XXX;07.06.2021;CSU;Resp. exploitation site;400;Divers institutionnels
+1005;XXX;08.06.2021;CSU;Resp. exploitation site;501;Vacances
+1005;XXX;09.06.2021;CSU;Resp. exploitation site;501;Vacances
+1005;XXX;10.06.2021;CSU;Resp. exploitation site;501;Vacances
+1005;XXX;11.06.2021;CSU;Resp. exploitation site;501;Vacances
+1005;XXX;14.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1005;XXX;15.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1005;XXX;16.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1005;XXX;17.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1005;XXX;18.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1005;XXX;21.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1005;XXX;22.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1005;XXX;23.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1005;XXX;24.06.2021;CSU;Resp. exploitation site;324;Horaire Payerne
+1005;XXX;25.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1005;XXX;28.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1005;XXX;29.06.2021;CSU;Resp. exploitation site;301;Horaire 1 - Jour Payerne
+1005;XXX;01.07.2021;CSU;Resp. exploitation site;402;Formation externe � 08h18
+1006;XXX;01.06.2021;CSU;Technicien ambulancier;301;Horaire 1 - Jour Payerne
+1006;XXX;04.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1006;XXX;05.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1006;XXX;06.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1006;XXX;07.06.2021;CSU;Technicien ambulancier;400;Divers institutionnels
+1006;XXX;09.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1006;XXX;10.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+1006;XXX;14.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1006;XXX;15.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1006;XXX;18.06.2021;CSU;Technicien ambulancier;305;Horaire 5 - Jour St-Loup
+1006;XXX;23.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1006;XXX;24.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1006;XXX;28.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1006;XXX;29.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+
+1007;XXX;01.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1007;XXX;03.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1007;XXX;04.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1007;XXX;07.06.2021;CSU;Resp. exploitation site;400;Divers institutionnels
+1007;XXX;08.06.2021;CSU;Resp. exploitation site;501;Vacances
+1007;XXX;09.06.2021;CSU;Resp. exploitation site;501;Vacances
+1007;XXX;10.06.2021;CSU;Resp. exploitation site;501;Vacances
+1007;XXX;11.06.2021;CSU;Resp. exploitation site;501;Vacances
+1007;XXX;14.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1007;XXX;15.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1007;XXX;16.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1007;XXX;17.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1007;XXX;18.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1007;XXX;21.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1007;XXX;22.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1007;XXX;23.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1007;XXX;24.06.2021;CSU;Resp. exploitation site;324;Horaire Payerne
+1007;XXX;25.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1007;XXX;28.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1007;XXX;29.06.2021;CSU;Resp. exploitation site;301;Horaire 1 - Jour Payerne
+1007;XXX;01.07.2021;CSU;Resp. exploitation site;402;Formation externe � 08h18
+1008;XXX;01.06.2021;CSU;Technicien ambulancier;301;Horaire 1 - Jour Payerne
+1008;XXX;04.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1008;XXX;05.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1008;XXX;06.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1008;XXX;07.06.2021;CSU;Technicien ambulancier;400;Divers institutionnels
+1008;XXX;09.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1008;XXX;10.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+1008;XXX;14.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1008;XXX;15.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1008;XXX;18.06.2021;CSU;Technicien ambulancier;305;Horaire 5 - Jour St-Loup
+1008;XXX;23.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1008;XXX;24.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1008;XXX;28.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1008;XXX;29.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+
+1009;XXX;01.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1009;XXX;03.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1009;XXX;04.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1009;XXX;07.06.2021;CSU;Resp. exploitation site;400;Divers institutionnels
+1009;XXX;08.06.2021;CSU;Resp. exploitation site;501;Vacances
+1009;XXX;09.06.2021;CSU;Resp. exploitation site;501;Vacances
+1009;XXX;10.06.2021;CSU;Resp. exploitation site;501;Vacances
+1009;XXX;11.06.2021;CSU;Resp. exploitation site;501;Vacances
+1009;XXX;14.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1009;XXX;15.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1009;XXX;16.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1009;XXX;17.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1009;XXX;18.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1009;XXX;21.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1009;XXX;22.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1009;XXX;23.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1009;XXX;24.06.2021;CSU;Resp. exploitation site;324;Horaire Payerne
+1009;XXX;25.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1009;XXX;28.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1009;XXX;29.06.2021;CSU;Resp. exploitation site;301;Horaire 1 - Jour Payerne
+1009;XXX;01.07.2021;CSU;Resp. exploitation site;402;Formation externe � 08h18
+1010;XXX;01.06.2021;CSU;Technicien ambulancier;301;Horaire 1 - Jour Payerne
+1010;XXX;04.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1010;XXX;05.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1010;XXX;06.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1010;XXX;07.06.2021;CSU;Technicien ambulancier;400;Divers institutionnels
+1010;XXX;09.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1010;XXX;10.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+1010;XXX;14.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1010;XXX;15.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1010;XXX;18.06.2021;CSU;Technicien ambulancier;305;Horaire 5 - Jour St-Loup
+1010;XXX;23.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1010;XXX;24.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1010;XXX;28.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1010;XXX;29.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+
+1011;XXX;01.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1011;XXX;03.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1011;XXX;04.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1011;XXX;07.06.2021;CSU;Resp. exploitation site;400;Divers institutionnels
+1011;XXX;08.06.2021;CSU;Resp. exploitation site;501;Vacances
+1011;XXX;09.06.2021;CSU;Resp. exploitation site;501;Vacances
+1011;XXX;10.06.2021;CSU;Resp. exploitation site;501;Vacances
+1011;XXX;11.06.2021;CSU;Resp. exploitation site;501;Vacances
+1011;XXX;14.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1011;XXX;15.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1011;XXX;16.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1011;XXX;17.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1011;XXX;18.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1011;XXX;21.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1011;XXX;22.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1011;XXX;23.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1011;XXX;24.06.2021;CSU;Resp. exploitation site;324;Horaire Payerne
+1011;XXX;25.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1011;XXX;28.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1011;XXX;29.06.2021;CSU;Resp. exploitation site;301;Horaire 1 - Jour Payerne
+1011;XXX;01.07.2021;CSU;Resp. exploitation site;402;Formation externe � 08h18
+1012;XXX;01.06.2021;CSU;Technicien ambulancier;301;Horaire 1 - Jour Payerne
+1012;XXX;04.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1012;XXX;05.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1012;XXX;06.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1012;XXX;07.06.2021;CSU;Technicien ambulancier;400;Divers institutionnels
+1012;XXX;09.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1012;XXX;10.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+1012;XXX;14.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1012;XXX;15.06.2021;CSU;Technicien ambulancier;320;Horaire 5 - Nuit St-Loup
+1012;XXX;18.06.2021;CSU;Technicien ambulancier;305;Horaire 5 - Jour St-Loup
+1012;XXX;23.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1012;XXX;24.06.2021;CSU;Technicien ambulancier;4057;horaire 8 - nuit Yverdon
+1012;XXX;28.06.2021;CSU;Technicien ambulancier;307;Horaire 7 - jour Yverdon
+1012;XXX;29.06.2021;CSU;Technicien ambulancier;314;Horaire 8 -  jour Yverdon
+
+1104;XXX;01.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1104;XXX;03.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1104;XXX;04.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1104;XXX;07.06.2021;CSU;Resp. exploitation site;400;Divers institutionnels
+1104;XXX;08.06.2021;CSU;Resp. exploitation site;501;Vacances
+1104;XXX;09.06.2021;CSU;Resp. exploitation site;501;Vacances
+1104;XXX;10.06.2021;CSU;Resp. exploitation site;501;Vacances
+1104;XXX;11.06.2021;CSU;Resp. exploitation site;501;Vacances
+1104;XXX;14.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1104;XXX;15.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1104;XXX;16.06.2021;CSU;Resp. exploitation site;306;Horaire 6 - Jour La Vall�e
+1104;XXX;17.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1104;XXX;18.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1104;XXX;21.06.2021;CSU;Resp. exploitation site;519;Absence impr�vue
+1104;XXX;22.06.2021;CSU;Resp. exploitation site;314;Horaire 8 -  jour Yverdon
+1104;XXX;23.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1104;XXX;24.06.2021;CSU;Resp. exploitation site;324;Horaire Payerne
+1104;XXX;25.06.2021;CSU;Resp. exploitation site;302;Horaire 2 - Jour Payerne
+1104;XXX;28.06.2021;CSU;Resp. exploitation site;112;Horaire L
+1104;XXX;29.06.2021;CSU;Resp. exploitation site;301;Horaire 1 - Jour Payerne
+1104;XXX;01.07.2021;CSU;Resp. exploitation site;402;Formation externe � 08h18
+

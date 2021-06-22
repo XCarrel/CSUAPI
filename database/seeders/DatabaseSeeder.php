@@ -38,5 +38,7 @@ class DatabaseSeeder extends Seeder
         $this->call(TodosheetsTableSeeder::class);
         $this->call(TodosTableSeeder::class);
         $this->call(TokensTableSeeder::class);
+        $this->call(WorktimesTableSeeder::class);
+        $this->call(WorkplanningsTableSeeder::class);
     }
 }
